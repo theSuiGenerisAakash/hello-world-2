@@ -24,7 +24,11 @@ console.log("Is the sum of [1,2,-5] and [4,5,-6] equal to [5,7,-11]: ", f.arrayS
 console.log("Should the sum of [1,2] and [4,5,6,7] give an error: ", f.arraySum([1, 2], [4, 5, 6, 7]) === false);
 console.log("Should the sum of [] and [4,-Infinity,6] give an error: ", f.arraySum([], [4, -Infinity, 6]) === false);
 console.log("Should the sum of [1,2,3] with undefined give an error ", f.arraySum([1, 2, 3], undefined) === false);
+console.log("Should the sum of [] and [] equal to []: ", f.arraySum([], [], []) === true);
 
 //Added two test cases to reject cases with elements that are not numbers
 console.log("Should the array [1,2,{}] give an an error: ", f.verifyElements([1,2,{}]) === false);
 console.log("Should the array [undefined,null,\"yes\"] give an error: ", f.verifyElements([undefined,null,"yes"]) === false);
+
+//Testing arraySum where ONLY NUMBERS are allowed as elements
+console.log("Should the sum of [1,2,undefined, {}] and [4,5,6,7] give an error: ", f.arraySum([1, 2, undefined, {}], [4, 5, 6, 7]) === false);
