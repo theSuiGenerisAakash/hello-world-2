@@ -9,3 +9,6 @@ console.log(f.verifyVar(true) === false);
 console.log(f.verifyVar(12.32) === false);
 console.log(f.verifyVar(undefined) === false);
 console.log(f.verifyVar(null) === false);
+
+//Treating an array inside a string to be valid.
+console.log(f.verifyVar('[1,2,3]') === true);   //Will return false
