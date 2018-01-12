@@ -19,4 +19,8 @@ console.log("Does it fail on arrays of different lengths [1,2,3,4,5], [2,1]: ", 
 console.log("Are empty arrays equal in length [], []: ", f.verifyLen([], []) === true);
 
 //Testing arraySum
-console.log("Is the sum of [1,2,3] and [4,5,6] equal to [5,7,9]: ", f.arraySum([1,2,3], [4,5,6], [5,7,9]) === true);
+console.log("Is the sum of [1,2,3] and [4,5,6] equal to [5,7,9]: ", f.arraySum([1, 2, 3], [4, 5, 6], [5, 7, 9]) === true);
+console.log("Is the sum of [1,2,-5] and [4,5,-6] equal to [5,7,-11]: ", f.arraySum([1, 2, -5], [4, 5, -6], [5, 7, -11]) === true);
+console.log("Should the sum of [1,2] and [4,5,6,7] give error: ", f.arraySum([1, 2], [4, 5, 6, 7]) === false);
+console.log("Should the sum of [] and [4,-Infinity,6] give error: ", f.arraySum([], [4, -Infinity, 6]) === false);
+console.log("Should the sum of [1,2,3] with undefined give error ", f.arraySum([1, 2, 3], undefined) === false);
