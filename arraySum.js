@@ -16,7 +16,7 @@ module.exports = {
     }
   },
 
-  arraySum: function(firstArr, secondArr){
-
+  arraySum: function(firstArr, secondArr, expectedSumArray = []){
+  
   }
 }
