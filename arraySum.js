@@ -8,5 +8,15 @@ module.exports = {
       console.log("FAIL: The variable passed is not an Array, it is a " + typeof a );
       return false;
     }
+  },
+
+  verifyLen: function(firstArr, secondArr){
+    if(this.verifyVar(firstArr) && this.verifyVar(secondArr)){
+        return firstArr.length === secondArr.length;
+    }
+  },
+
+  arraySum: function(firstArr, secondArr){
+
   }
 }
