@@ -1,0 +1,1 @@
+A function conceived using **Test Driven Development(TDD)** which handles two arrays of equal lengths, verifies and adds the corresponding elements to finally return the resultant array if validation is successful.
