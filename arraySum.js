@@ -1,11 +1,11 @@
 module.exports = {
-  verifyVar: function(a){
-    if(a instanceof Array || (typeof a === 'string' && JSON.parse(a) instanceof Array)){
+  verifyVar: function(anArray){
+    if(anArray instanceof Array || (typeof anArray === 'string' && JSON.parse(anArray) instanceof Array)){
       console.log("PASS: The variable is an Array");
       return true;
     }
     else{
-      console.log("FAIL: The variable passed is not an Array, it is a " + typeof a );
+      console.log("FAIL: The variable passed is not an Array, it is a " + typeof anArray );
       return false;
     }
   },
@@ -14,6 +14,10 @@ module.exports = {
     if(this.verifyVar(firstArr) && this.verifyVar(secondArr)){
         return firstArr.length === secondArr.length;
     }
+  },
+
+  verifyElements: function () {
+    
   },
 
   arraySum: function(firstArr, secondArr, expectedSumArray = []){
