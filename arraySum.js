@@ -32,21 +32,21 @@ module.exports = {
     let len = anArray.length;
     for (let i = 0; i < len; i++) {
       if(!this.verifyVar(anArray[i], Number)){
-          return false;
+        return false;
       }
     }
     return true;
   },
 
   arraySum: function(firstArr, secondArr, expectedSumArray = []){
-    if(this.verifyLen(firstArr, secondArr)){
+    if(this.verifyLen(firstArr, secondArr) && this.verifyElements(firstArr) && this.verifyElements(secondArr)){
       let len = firstArr.length;
       let sumOfTwoArrays = [];
       for(let i = 0; i < len; i++){
         sumOfTwoArrays[i] = firstArr[i] + secondArr[i];
       }
-      if(expectedSumArray.length === 0)
-      return sumOfTwoArrays;
+      if(expectedSumArray.length === 0 && (firstArr.length !== 0 || secondArr.length !== 0))
+        return sumOfTwoArrays;
       else {
         for(let i = 0; i < len; i++){
           if(sumOfTwoArrays[i] !== expectedSumArray[i]){
